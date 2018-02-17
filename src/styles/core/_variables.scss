@@ -16,20 +16,22 @@ $white: #fff;
 $light-gray: #e6e6e6;
 $lighter-gray: #eee;
 $med-gray: #acacac;
-$dark-gray: #696969;
+$dark-gray: #1f363d;
 
-$red: #d9534f;
-$blue: #428bca;
+$red: #db162f;
+$blue: #4357ad;
 $green: #5cb85c;
 $light-blue: #5bc0de;
 $yellow: #f0ad4e;
+$biege: #f4f1de;
+$orange: #e07a5f;
 
 $focus-color: $light-blue;
 
-$brand-primary: darken($blue, 6.5%) !default; // #337ab7
+$brand-primary: $blue !default;
 $brand-success: $green !default;
-$brand-info: $light-blue !default;
-$brand-warning: $yellow !default;
+$brand-info: $dark-gray !default;
+$brand-warning: $orange !default;
 $brand-danger: $red !default;
 
 //## Define colors for form feedback states and, by default, alerts.
