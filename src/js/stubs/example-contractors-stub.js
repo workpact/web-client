@@ -1,10 +1,5 @@
-export const AuthenticatedUser = {
-  account: {
-    ethBalance: '402.7801'
-  },
-  id: 'd81738e8-213b-4bf5-9ec9-26d98944728b',
-  username: 'jared',
-  profile: {
+export const ExampleContractors = [
+  {
     averageRating: 2,
     id: 'example-profile-000',
     certifications: [
@@ -28,12 +23,6 @@ export const AuthenticatedUser = {
       '003-example-contract-id',
       '004-example-contract-id',
       '005-example-contract-id',
-      '006-example-contract-id',
-      '007-example-contract-id',
-      '008-example-contract-id',
-      '009-example-contract-id',
-      'abc-example-contract-id',
-      'efg-example-contract-id',
       'hij-example-contract-id',
       'klm-example-contract-id',
       'nop-example-contract-id',
@@ -42,14 +31,14 @@ export const AuthenticatedUser = {
       'wx-example-contract-id',
       'yz-example-contract-id'
     ],
-    contestedContracts: [],
+    contestedContracts: ['klm-example-contract-id'],
     tips: [
       {
-        amount: '0.0123',
-        user: '002-example-user',
+        amount: '0.408',
+        user: '008-example-user',
         comment:
-          'Jared does beautiful work quickly. Would love to work together again.'
+          'My cabinets are perfect. Prompt, professional, easy to work with.'
       }
     ]
   }
-}
+]

@@ -1,24 +1,12 @@
 import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
-import ExampleFormContainer from 'components/forms/example-form'
+import AccountContainer from 'components/account'
 import HomeContainer from 'components/home'
-import LandingContainer from 'components/landing'
 
-import ExampleAccordion from 'components/examples/presentation/example-accordion'
-
-import FourOhFour from 'pages/four-oh-four.jsx'
-
-const AuthenticatedRoutes = () => (
-  <Switch>
-    <Route exact path='/' component={LandingContainer} />
-    <Route exact path='/example' component={ExampleFormContainer} />
-    <Route path='/example/accordion' component={ExampleAccordion} />
-    <Route path='/home' component={HomeContainer} />
-    <Route path='/login' render={() => <Redirect to='/' />} />
-    <Route path='/new' render={() => <Redirect to='/' />} />
-    <Route path='*' component={FourOhFour} />
-  </Switch>
-)
+const AuthenticatedRoutes = () => [
+  <Route path='/account' component={AccountContainer} key='auth-route-0' />,
+  <Route path='/home' component={HomeContainer} key='auth-route-1' />
+]
 
 export default AuthenticatedRoutes
