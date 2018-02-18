@@ -70,9 +70,11 @@ $hero-height: 600px;
 
   &-cta {
     background-color: $off-white;
+    display: flex;
   }
 
   &-metrics {
     background-color: $off-white;
+    background-image: url('~images/blueprint.jpg');
   }
 }

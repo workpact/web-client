@@ -4,9 +4,11 @@ import { Button } from 'bloom-forms'
 const Hero = () => {
   return (
     <div className='Landing-hero'>
-      <h2 className='Landing-subheader'>Trust and Mo Money.</h2>
+      <h2 className='Landing-subheader'>
+        BUILD REPUTATION<br />ENSURE PAYMENT.
+      </h2>
       <div className='Landing-hero-action'>
-        <Button contents='Get in here' className='Btn' />
+        <Button contents='START A PROJECT' className='Btn' />
       </div>
     </div>
   )

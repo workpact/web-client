@@ -5,7 +5,7 @@ import 'styles/components/license-badge'
 
 const LicenseBadge = ({ type }) => {
   return (
-    <div className={`Badge Badge--${type}`}>
+    <div className={`LicenseBadge LicenseBadge--${type}`}>
       <span className='u-sr-only'>Licensed {type}</span>
     </div>
   )

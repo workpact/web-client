@@ -5,8 +5,10 @@ import LicenseBadge from 'presentation/layout/license-badge'
 const BrowseCTA = () => {
   return (
     <div className='Landing-cta'>
-      landing cta
-      <LicenseBadge type='contractor' />
+      FIND A CONTRACTOR
+      <LicenseBadge type='carpenter' />
+      <LicenseBadge type='plumber' />
+      <LicenseBadge type='electrician' />
     </div>
   )
 }
