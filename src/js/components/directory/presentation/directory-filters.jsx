@@ -16,12 +16,18 @@ const DirectoryFilters = ({
     rating: { value: '' }
   }
   const searchUpdate = e => {
+    filterContractors({
+      fieldName: 'name',
+      fieldValue: e.target.value
+    })
     updateForm(e)
-    filterContractors({ name: e.target.value })
   }
 
   const filterUpdate = (formId, fieldName, fieldValue, type = 'text') => {
-    filterContractors({ [fieldName.replace('filter-', '')]: fieldValue })
+    filterContractors({
+      fieldName: fieldName.replace('filter-', ''),
+      fieldValue
+    })
     manualFieldUpdate(formId, fieldName, fieldValue, type)
   }
 
@@ -32,25 +38,43 @@ const DirectoryFilters = ({
         name='name-search'
         onChange={searchUpdate}
         value={(formData['name-search'] && formData['name-search'].value) || ''}
+        showLabel
       />
-      <SelectInput
-        formId={props.formId}
-        label='Filter by Specialty'
-        name='filter-specialty'
-        onChange={filterUpdate}
-      />
-      <SelectInput
-        formId={props.formId}
-        label='Filter by Status'
-        name='filter-status'
-        onChange={filterUpdate}
-      />
-      <SelectInput
-        formId={props.formId}
-        label='Filter by Rating'
-        name='filter-rating'
-        onChange={filterUpdate}
-      />
+      <div className='Directory-filters-row'>
+        <SelectInput
+          formId={props.formId}
+          label='Filter by Specialty'
+          name='filter-specialty'
+          onChange={filterUpdate}
+          typeAhead={false}
+          value={
+            (formData['filter-specialty'] &&
+              formData['filter-specialty'].value) ||
+            ''
+          }
+        />
+        <SelectInput
+          formId={props.formId}
+          label='Filter by Status'
+          name='filter-status'
+          options={['Not Available', 'Accepting Contracts']}
+          onChange={filterUpdate}
+          typeAhead={false}
+          value={
+            (formData['filter-status'] && formData['filter-status'].value) || ''
+          }
+        />
+        <SelectInput
+          formId={props.formId}
+          label='Filter by Rating'
+          name='filter-rating'
+          onChange={filterUpdate}
+          typeAhead={false}
+          value={
+            (formData['filter-rating'] && formData['filter-rating'].value) || ''
+          }
+        />
+      </div>
     </div>
   )
 }

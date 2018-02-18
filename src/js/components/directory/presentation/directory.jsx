@@ -5,6 +5,9 @@ import { Form } from 'bloom-forms'
 import { ProfileType } from 'util/types'
 
 import Contractor from './contractor'
+import DirectoryFilters from './directory-filters'
+
+import 'styles/components/directory'
 
 const Directory = ({ contractors, filterContractors }) => {
   return (
@@ -22,9 +25,7 @@ const Directory = ({ contractors, filterContractors }) => {
         <DirectoryFilters filterContractors={filterContractors} />
       </Form>
       <ul className='Directory-list'>
-        {contractors.map((contractor, i) => (
-          <Contractor index={i} {...contractor} />
-        ))}
+        {contractors.map(contractor => <Contractor {...contractor} />)}
       </ul>
     </div>
   )

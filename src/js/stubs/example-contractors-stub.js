@@ -15,10 +15,7 @@ export const ExampleContractors = [
         icon: 'general-contractor.svg'
       }
     ],
-    status: {
-      id: '109i',
-      label: 'Accepting Contracts'
-    },
+    status: 'Accepting Contracts',
     completedContracts: [
       '000-example-contract-id',
       '001-example-contract-id',
@@ -55,10 +52,7 @@ export const ExampleContractors = [
         icon: 'carpenter.svg'
       }
     ],
-    status: {
-      id: '123b',
-      label: 'Not Available'
-    },
+    status: 'Not Available',
     completedContracts: [
       '000-example-contract-id',
       '001-example-contract-id',
@@ -100,10 +94,7 @@ export const ExampleContractors = [
         icon: 'carpenter.svg'
       }
     ],
-    status: {
-      id: '109i',
-      label: 'Accepting Contracts'
-    },
+    status: 'Accepting Contracts',
     completedContracts: [
       '000-example-contract-id',
       '001-example-contract-id',
@@ -128,10 +119,7 @@ export const ExampleContractors = [
         icon: 'carpenter.svg'
       }
     ],
-    status: {
-      id: '109i',
-      label: 'Accepting Contracts'
-    },
+    status: 'Accepting Contracts',
     completedContracts: [
       '000-example-contract-id',
       '001-example-contract-id',

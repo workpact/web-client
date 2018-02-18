@@ -1,0 +1,22 @@
+/*
+DIRECTORY
+*/
+
+@import '../core/variables';
+
+.Directory {
+  &-filters {
+    margin: $pad-mar-large auto 0;
+    max-width: 900px;
+
+    &-row {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .SelectInput-wrapper {
+      width: 30%;
+    }
+  }
+}
