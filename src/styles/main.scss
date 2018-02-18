@@ -12,6 +12,7 @@
 }
 
 body {
+  background-color: $off-white;
   color: $dark-gray;
   font-family: $main-font;
   margin: 0;
@@ -23,7 +24,7 @@ main {
 
 .App-container {
   display: grid;
-  grid-template: minmax($header-height, auto) 1fr 50px / 1fr;
+  grid-template: minmax($header-height, auto) 1fr / 1fr;
   height: minmax(100vh, 100%);
 }
 

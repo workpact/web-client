@@ -13,6 +13,8 @@ COLORS
 */
 $black: #000;
 $white: #fff;
+$beige: #f4f1de;
+$off-white: lighten($beige, 8%);
 $light-gray: #e6e6e6;
 $lighter-gray: #eee;
 $med-gray: #acacac;
@@ -23,7 +25,6 @@ $blue: #4357ad;
 $green: #5cb85c;
 $light-blue: #5bc0de;
 $yellow: #f0ad4e;
-$biege: #f4f1de;
 $orange: #e07a5f;
 
 $focus-color: $light-blue;
@@ -59,7 +60,8 @@ $box-shadow-no-top: 0 5px 12px -5px rgba(0, 0, 0, 0.4);
 TYPOGRAPHY
 ==========
 */
-$main-font: 'filson-pro', Verdana, sans-serif;
+$main-font: 'Roboto', sans-serif;
+$alt-font: 'Fjalla One', sans-serif;
 
 $main-font-size: 16px;
 $giant-font-size: 100px;

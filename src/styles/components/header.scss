@@ -5,8 +5,10 @@
 
 .Header {
   align-items: center;
-  background-color: $light-blue;
+  background-color: $off-white;
+  box-shadow: $box-shadow;
   box-sizing: border-box;
+  color: $brand-primary;
   display: flex;
   height: $header-height;
   justify-content: space-between;
