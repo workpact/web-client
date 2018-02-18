@@ -42,26 +42,46 @@ class SubHeader extends React.Component {
   };
 
   render() {
-    const { user } = this.props
+    const { location, user } = this.props
     const { showDropdown, showMobileMenu } = this.state
 
     return (
       <div className='SubHeader-wrapper'>
         <div className={`SubHeader ${showDropdown ? 'is-open' : ''}`}>
-          <Link to='/how-it-works' className='SubHeader-link'>
+          <Link
+            to='/how-it-works'
+            className={`SubHeader-link ${
+              location.pathname.indexOf('how-it-works') > -1 ? 'is-active' : ''
+            }`}
+          >
             How it Works
           </Link>
-          <Link to='/contractors' className='SubHeader-link'>
+          <Link
+            to='/contractors'
+            className={`SubHeader-link ${
+              location.pathname.indexOf('contractors') > -1 ? 'is-active' : ''
+            }`}
+          >
             Contractors
           </Link>
-          <Link to='/projects' className='SubHeader-link'>
+          <Link
+            to='/projects'
+            className={`SubHeader-link ${
+              location.pathname.indexOf('projects') > -1 ? 'is-active' : ''
+            }`}
+          >
             Project Listings
           </Link>
 
           {user &&
             user.loaded &&
             user.username && (
-              <Link to='/home' className='SubHeader-link'>
+              <Link
+                to='/home'
+                className={`SubHeader-link ${
+                  location.pathname.indexOf('home') > -1 ? 'is-active' : ''
+                }`}
+              >
                 Dashboard
               </Link>
             )}

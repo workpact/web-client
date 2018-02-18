@@ -1,16 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
-const Contractor = ({ index, ...props }) => {
+const Contractor = props => {
   return (
-    <li key={`contractor-${index}`} className='Directory-contractor'>
-      <h3 className='Directory-contractor-name'>{props.username}</h3>
+    <li key={`contractor-${props.id}`} className='Directory-contractor'>
+      <h3 className='Directory-contractor-name'>{props.name}</h3>
     </li>
   )
 }
 
-Contractor.propTypes = {
-  index: PropTypes.number.isRequired
-}
+Contractor.propTypes = {}
 
 export default Contractor

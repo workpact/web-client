@@ -10,7 +10,11 @@ class DirectoryContainer extends React.Component {
 
   filterContractors = sortObj => {
     const newContractors = [...this.state.allContractors].filter(contractor => {
-      return contractor[sortObj.fieldName] === sortObj.fieldValue
+      return sortObj.fieldName === 'name'
+        ? contractor[sortObj.fieldName]
+            .toLowerCase()
+            .indexOf(sortObj.fieldValue.toLowerCase()) > -1
+        : contractor[sortObj.fieldName] === sortObj.fieldValue
     })
     this.setState({
       contractors: newContractors
