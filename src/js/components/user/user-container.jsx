@@ -1,6 +1,8 @@
 import React from 'react'
 import { withRouter } from 'react-router'
 
+import User from './presentation/user'
+
 class UserContainer extends React.Component {
   constructor(props) {
     super(props)
@@ -22,12 +24,8 @@ class UserContainer extends React.Component {
   };
 
   render() {
-    return (
-      <div>
-        <div>hello user world</div>
-        <pre>{JSON.stringify(this.state.userInfo, null, 4)}</pre>
-      </div>
-    )
+    const { userInfo: user } = this.state
+    return <User content={user} />
   }
 }
 
