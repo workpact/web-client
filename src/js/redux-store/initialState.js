@@ -16,7 +16,8 @@ const initialState = {
     notifications: [],
     username: '',
     walletAddress: ''
-  }
+  },
+  listings: []
 }
 
 export default initialState

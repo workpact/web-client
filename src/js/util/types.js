@@ -36,3 +36,13 @@ export const TipType = {
   user: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired
 }
+
+export const ListingType = {
+  specialization: PropTypes.string.isRequired,
+  startDate: PropTypes.string.isRequired,
+  endDate: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
+  issuer: PropTypes.shape(UserType).isRequired,
+  status: PropTypes.string.isRequired
+}

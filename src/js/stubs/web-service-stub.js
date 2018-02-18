@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { AuthenticatedUser } from './authenticated-user-stub'
+import { ProjectListings } from './project-listings'
 
 var loggedIn = true
 
@@ -12,11 +13,20 @@ export class WebServiceStub {
     return Promise.resolve({ data: true })
   };
 
-  getUser = async () => {
+  getUser = async id => {
     const user = loggedIn ? AuthenticatedUser : {}
     return new Promise(resolve => {
       setTimeout(() => {
         return resolve({ data: user })
+      }, 2000)
+    })
+  };
+
+  getListings = async () => {
+    const listings = loggedIn ? ProjectListings : []
+    return new Promise(resolve => {
+      setTimeout(() => {
+        return resolve({ data: listings })
       }, 2000)
     })
   };
