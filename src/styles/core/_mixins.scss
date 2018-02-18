@@ -4,6 +4,37 @@ MIXINS
 aka functions to output css
 */
 
+@mixin hexagon($color, $width) {
+  $extra: calc(#{$width} * 28.87);
+
+  background-color: $color;
+  position: relative;
+  height: calc(#{$width} * 57.74);
+  margin: $extra;
+  width: $width;
+
+  &::after,
+  &::before {
+    border-left: calc(#{$width} / 2);
+    border-right: calc(#{$width} / 2);
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 0;
+  }
+
+  &::after {
+    border-top: $extra solid $color;
+    top: 100%;
+    width: 0;
+  }
+
+  &::before {
+    border-bottom: $extra solid $color;
+    bottom: 100%;
+  }
+}
+
 /* helper function for linear-gradient mixin */
 @function is-direction($value) {
   $is-keyword: index(
