@@ -7,8 +7,8 @@
 
 .SubHeader {
   align-items: center;
-  background-color: $off-white;
-  color: $dark-gray;
+  background-color: $dark-gray;
+  color: $off-white;
   display: none;
   font-family: $main-font;
   font-size: $main-font-size;
@@ -37,7 +37,7 @@
     &:focus,
     &:hover,
     &:visited {
-      color: $brand-primary;
+      color: $white;
     }
   }
 
@@ -60,7 +60,7 @@
 
   svg {
     @include transition(0.3s ease);
-    fill: $brand-primary;
+    fill: $white;
     margin-left: $pad-mar-small;
     width: 1em;
   }

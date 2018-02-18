@@ -5,12 +5,13 @@ ACCOUNT DROPDOWN
 @import '../core/mixins';
 @import '../core/variables';
 
-$dropdown-width: 250px;
+$dropdown-width: 150px;
 
 .AccountDropdown {
   @include transition(0.3s ease top, 0s ease z-index 0.3s);
-  background-color: $off-white;
+  background-color: $dark-gray;
   box-shadow: $box-shadow-no-top;
+  color: $off-white;
   display: inline-block;
   position: absolute;
   right: 0;
@@ -21,7 +22,7 @@ $dropdown-width: 250px;
   a {
     display: inline-block;
     box-sizing: border-box;
-    color: $dark-gray;
+    color: $off-white;
     padding: $pad-mar-med 0 $pad-mar-med $pad-mar-large;
     position: relative;
     text-decoration: none;
@@ -31,7 +32,7 @@ $dropdown-width: 250px;
     &:active,
     &:focus,
     &:hover {
-      background-color: $lighter-gray;
+      background-color: lighten($dark-gray, 5%);
     }
   }
 
