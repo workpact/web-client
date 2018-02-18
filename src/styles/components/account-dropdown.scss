@@ -7,12 +7,12 @@ ACCOUNT DROPDOWN
 
 .AccountDropdown {
   @include transition(0.3s ease top, 0s ease z-index 0.3s);
-  background-color: $white;
-  box-shadow: $box-shadow;
+  background-color: $off-white;
+  box-shadow: $box-shadow-no-top;
   display: inline-block;
   position: absolute;
   right: 0;
-  top: $header-height;
+  top: calc(#{$header-height} + 1px);
   z-index: $z-10;
 
   a {
