@@ -4,7 +4,7 @@ export const AuthenticatedUser = {
     ethBalance: '402.7801'
   },
   id: 'd81738e8-213b-4bf5-9ec9-26d98944728b',
-  username: 'jared',
+  username: 'jared-the-gen-contractor',
   profile: {
     averageRating: 2,
     id: 'example-profile-000',

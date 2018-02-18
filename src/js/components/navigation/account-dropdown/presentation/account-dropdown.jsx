@@ -16,6 +16,11 @@ const AccountDropdown = ({ close, show, ...props }) => {
       {() => (
         <ul className={`AccountDropdown ${show ? '' : 'is-hidden'}`}>
           <DropdownButton
+            url='/account'
+            text='Account'
+            tabIndex={show ? 0 : -1}
+          />
+          <DropdownButton
             onClick={logoutAndClose}
             text='Log out'
             tabIndex={show ? 0 : -1}

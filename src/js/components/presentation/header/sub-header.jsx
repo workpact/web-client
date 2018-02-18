@@ -1,5 +1,6 @@
 import React from 'react'
 import SVGInline from 'react-svg-inline'
+import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
 import AccountDropdownContainer from 'components/navigation/account-dropdown'
@@ -50,17 +51,38 @@ class SubHeader extends React.Component {
     return (
       <div className='SubHeader-wrapper'>
         <div className={`SubHeader ${showDropdown ? 'is-open' : ''}`}>
+          <Link to='/how-it-works' className='SubHeader-link'>
+            How it Works
+          </Link>
+          <Link to='/contractors' className='SubHeader-link'>
+            Contractors
+          </Link>
+          <Link to='/projects' className='SubHeader-link'>
+            Project Listings
+          </Link>
+
           {user &&
+            user.loaded &&
             user.username && (
-              <a
-                href='#'
-                onClick={this.toggleDropdown}
-                className='SubHeader-user'
-              >
-                {user.username}
-                <SVGInline svg={downCarrot} />
-              </a>
+              <Link to='/home' className='SubHeader-link'>
+                Dashboard
+              </Link>
             )}
+
+          {user && user.username ? (
+            <a
+              href='#'
+              onClick={this.toggleDropdown}
+              className='SubHeader-user SubHeader-link'
+            >
+              {user.username}
+              <SVGInline svg={downCarrot} />
+            </a>
+          ) : (
+            <Link to='/login' className='SubHeader-link'>
+              Sign In
+            </Link>
+          )}
           <AccountDropdownContainer
             show={showDropdown}
             close={this.toggleDropdown}

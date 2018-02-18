@@ -10,6 +10,8 @@
   background-color: $off-white;
   color: $dark-gray;
   display: none;
+  font-family: $main-font;
+  font-size: $main-font-size;
   height: 100%;
   justify-content: flex-end;
   min-width: 200px;
@@ -21,13 +23,33 @@
     height: 100%;
   }
 
+  &-link {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+    padding: 0 $pad-mar-large;
+
+    &:last-of-type {
+      margin-left: $pad-mar-xx-large;
+    }
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited {
+      color: $brand-primary;
+    }
+  }
+
   &-user {
-    color: $black;
-    display: inline-block;
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
   }
 
   svg {
     @include transition(0.3s ease);
+    fill: $brand-primary;
     margin-left: $pad-mar-small;
     width: 1em;
   }
