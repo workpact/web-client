@@ -51,8 +51,20 @@ $hero-height: 600px;
     }
 
     .Btn {
+      align-items: center;
       margin: 0 auto;
       width: 200px;
+
+      &::after {
+        background-image: url('~images/css-svgs/arrow-point-to-right.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: inline-block;
+        height: 1em;
+        margin-left: $pad-mar-med;
+        width: 20px;
+      }
     }
   }
 
