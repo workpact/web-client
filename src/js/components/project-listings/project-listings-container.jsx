@@ -1,59 +1,34 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 
-import { getListings } from 'redux-store/actions/listingActions'
-import { ListingType } from 'types'
+import ProjectListings from './presentation/project-listings'
 
 class ProjectListingsContainer extends React.Component {
-  static propTypes = {
-    getListings: PropTypes.func,
-    listings: PropTypes.arrayOf(PropTypes.shape(ListingType))
-  };
+  constructor(props) {
+    super(props)
 
-  componentWillReceiveProps = async newProps => {
-    if (newProps.getListings && !this.props.getListings) {
-      try {
-        await newProps.getListings()
-      } catch (err) {
-        console.log('get listings error:', err) // eslint-disable-line no-console
-      }
+    this.state = {
+      listings: []
     }
-  };
+  }
 
   componentDidMount = async () => {
-    if (this.props.getListings) {
-      try {
-        await this.props.getListings()
-      } catch (err) {
-        console.log('get listings error:', err) // eslint-disable-line no-console
-      }
+    try {
+      const { data: listings } = await WebService.getListings()
+      this.setState({ listings })
+    } catch (err) {
+      console.log('get listings error:', err) // eslint-disable-line no-console
     }
   };
 
   render() {
     return (
       <div>
-        <div>hello ProjectListings world</div>
-        <pre>{JSON.stringify(this.props.listings, null, 4)}</pre>
+        <div>Project listings:</div>
+        <ProjectListings listings={this.state.listings} />
       </div>
     )
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    getListings: () => dispatch(getListings())
-  }
-}
-
-const mapStateToProps = state => {
-  return {
-    listings: state.listings
-  }
-}
-
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(ProjectListingsContainer)
-)
+export default withRouter(ProjectListingsContainer)
