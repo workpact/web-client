@@ -4,10 +4,11 @@ import Hero from './hero'
 import BrowseCTA from './browse-cta'
 import Metrics from './metrics'
 
+import 'styles/components/landing'
+
 const Landing = () => {
   return (
     <div className='Landing'>
-      Marketing page
       <Hero />
       <BrowseCTA />
       <Metrics />

@@ -2,25 +2,15 @@
 LOGO
 */
 
-@import '../core/_variables';
+@import '../core/variables';
 
 .Logo {
   align-items: center;
   display: inline-flex;
+  width: 80px;
 
   svg {
     fill: $brand-primary;
-    height: 30px;
-  }
-
-  &-text {
-    margin-left: $pad-mar-x-small;
-
-    svg {
-      height: 15px;
-    }
-  }
-
-  &--full {
+    width: 80px;
   }
 }

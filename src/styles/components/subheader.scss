@@ -45,6 +45,17 @@
     align-items: center;
     display: inline-flex;
     height: 100%;
+
+    &::before {
+      background-image: url('~distImages/avatar.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      display: inline-block;
+      height: 50px;
+      margin-right: $pad-mar-small;
+      width: 50px;
+    }
   }
 
   svg {

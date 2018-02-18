@@ -27,7 +27,9 @@ const baseConfig = {
         loader: 'url-loader',
         include: [
           path.join(__dirname, 'src/images'),
-          path.join(__dirname, 'public/fonts')
+          path.join(__dirname, 'public/images'),
+          path.join(__dirname, 'public/fonts'),
+          path.join(BUILD_DIR)
         ],
         exclude: [
           path.join(__dirname, 'src/images/inline-svgs')
@@ -85,6 +87,7 @@ const baseConfig = {
     }),
     new webpack.optimize.CommonsChunkPlugin('manifest'),
     new CopyWebpackPlugin([
+      { from: 'public/images', to: 'images' },
       { from: 'public/index.html' }
     ]),
     new HtmlWebpackPlugin({ template: './public/index.html' })
@@ -94,6 +97,7 @@ const baseConfig = {
     alias: {
       config:       path.resolve(__dirname, 'config'),
       components:   path.resolve(__dirname, 'src/js/components'),
+      distImages:   path.resolve(BUILD_DIR, 'images'),
       helpers:      path.resolve(__dirname, 'src/js/util/helpers'),
       icons:        path.resolve(__dirname, 'src/js/icons'),
       images:       path.resolve(__dirname, 'src/images'),

@@ -14,7 +14,7 @@ $dropdown-width: 250px;
   display: inline-block;
   position: absolute;
   right: 0;
-  top: calc(#{$header-height} + 1px);
+  top: $header-height;
   width: $dropdown-width;
   z-index: $z-10;
 
