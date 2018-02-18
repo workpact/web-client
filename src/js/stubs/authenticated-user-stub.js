@@ -1,15 +1,56 @@
 export const AuthenticatedUser = {
   account: {
-    total: 1234,
-    status: 'Good',
-    walletAddress: '0xde0B295669a9FD93d5F28D9Ec8540f4cb697BAe'
+    id: '001-example-account',
+    ethBalance: '402.7801'
   },
   id: 'd81738e8-213b-4bf5-9ec9-26d98944728b',
-  notifications: [
-    { message: 'Email Address Updated', details: '' },
-    { message: 'Auto-payment received', details: '0.239 ETH' },
-    { message: 'Complete Your Account', details: '' }
-  ],
-  password: 'test',
-  username: 'Jared'
+  username: 'jared',
+  profile: {
+    averageRating: 2,
+    id: 'example-profile-000',
+    certifications: [
+      {
+        id: '001-plumber',
+        label: 'Licensed Plumber'
+      },
+      {
+        id: '002-general-contractor',
+        label: 'Licensed General Contractor'
+      }
+    ],
+    status: {
+      id: '109i',
+      label: 'Accepting Contracts'
+    },
+    completedContracts: [
+      '000-example-contract-id',
+      '001-example-contract-id',
+      '002-example-contract-id',
+      '003-example-contract-id',
+      '004-example-contract-id',
+      '005-example-contract-id',
+      '006-example-contract-id',
+      '007-example-contract-id',
+      '008-example-contract-id',
+      '009-example-contract-id',
+      'abc-example-contract-id',
+      'efg-example-contract-id',
+      'hij-example-contract-id',
+      'klm-example-contract-id',
+      'nop-example-contract-id',
+      'qrs-example-contract-id',
+      'tuv-example-contract-id',
+      'wx-example-contract-id',
+      'yz-example-contract-id'
+    ],
+    contestedContracts: [],
+    tips: [
+      {
+        amount: '0.0123',
+        user: '002-example-user',
+        comment:
+          'Jared does beautiful work quickly. Would love to work together again.'
+      }
+    ]
+  }
 }
