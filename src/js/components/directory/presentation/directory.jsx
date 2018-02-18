@@ -1,0 +1,37 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Form } from 'bloom-forms'
+
+import { ProfileType } from 'util/types'
+
+import Contractor from './contractor'
+
+const Directory = ({ contractors, filterContractors }) => {
+  return (
+    <div className='Directory'>
+      <Form
+        id='directory-filters'
+        fieldNames={[
+          'name-search',
+          'filter-status',
+          'filter-rating',
+          'filter-specialty'
+        ]}
+        submitForm={() => ''}
+      >
+        <DirectoryFilters filterContractors={filterContractors} />
+      </Form>
+      <ul className='Directory-list'>
+        {contractors.map((contractor, i) => (
+          <Contractor index={i} {...contractor} />
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+Directory.propTypes = {
+  contractors: PropTypes.arrayOf(PropTypes.shape(ProfileType))
+}
+
+export default Directory

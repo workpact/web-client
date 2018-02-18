@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { AuthenticatedUser } from './authenticated-user-stub'
+import { ExampleContractors } from './example-contractors-stub'
 import { ProjectListings } from './project-listings'
 
 var loggedIn = true
@@ -20,6 +21,10 @@ export class WebServiceStub {
         return resolve({ data: user })
       }, 2000)
     })
+  };
+
+  getContractors = async () => {
+    return Promise.resolve({ data: ExampleContractors })
   };
 
   getListings = async () => {

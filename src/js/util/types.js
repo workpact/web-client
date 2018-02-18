@@ -26,6 +26,7 @@ export const ProfileType = {
     id: PropTypes.string,
     label: PropTypes.string
   }),
+  name: PropTypes.string.isRequired,
   completedContracts: PropTypes.arrayOf(PropTypes.string),
   contestedContracts: PropTypes.arrayOf(PropTypes.string),
   tips: PropTypes.arrayOf(PropTypes.shape(TipType))

@@ -8,6 +8,7 @@ import LandingContainer from 'components/landing'
 import LoginFormContainer from 'components/forms/login-form'
 import NewUserFormContainer from 'components/forms/new-user-form'
 import DirectoryContainer from 'components/directory'
+import ProjectListings from 'components/project-listings'
 import UserContainer from 'components/user'
 
 import FourOhFour from 'pages/four-oh-four.jsx'
@@ -37,7 +38,8 @@ const MainRouter = ({ user }) => {
             )
           }
         />
-        <Route path='/directory' component={DirectoryContainer} />
+        <Route path='/contractors' component={DirectoryContainer} />
+        <Route path='/projects' component={ProjectListings} />
         <Route path='/user/:id' component={UserContainer} />
         {AuthenticatedRoutes}
         <Route path='*' component={FourOhFour} />

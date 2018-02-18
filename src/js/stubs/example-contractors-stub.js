@@ -1,15 +1,18 @@
 export const ExampleContractors = [
   {
+    name: 'Michael Scott',
     averageRating: 2,
     id: 'example-profile-109',
     certifications: [
       {
         id: '001-plumber',
-        label: 'Licensed Plumber'
+        label: 'Licensed Plumber',
+        icon: 'plumber.svg'
       },
       {
         id: '002-general-contractor',
-        label: 'Licensed General Contractor'
+        label: 'Licensed General Contractor',
+        icon: 'general-contractor.svg'
       }
     ],
     status: {
@@ -42,12 +45,14 @@ export const ExampleContractors = [
     ]
   },
   {
+    name: 'Tim Taylor',
     averageRating: 1.52,
     id: 'example-profile-020',
     certifications: [
       {
         id: '004-carpenter',
-        label: 'Licensed Carpenter'
+        label: 'Licensed Carpenter',
+        icon: 'carpenter.svg'
       }
     ],
     status: {
@@ -85,12 +90,14 @@ export const ExampleContractors = [
     tips: []
   },
   {
+    name: 'Bob the Builder',
     averageRating: 1.82,
     id: 'example-profile-487',
     certifications: [
       {
         id: '004-carpenter',
-        label: 'Licensed Carpenter'
+        label: 'Licensed Carpenter',
+        icon: 'carpenter.svg'
       }
     ],
     status: {
@@ -111,12 +118,14 @@ export const ExampleContractors = [
     tips: []
   },
   {
+    name: 'Mario',
     averageRating: 2,
     id: 'example-profile-231',
     certifications: [
       {
         id: '004-carpenter',
-        label: 'Licensed Carpenter'
+        label: 'Licensed Carpenter',
+        icon: 'carpenter.svg'
       }
     ],
     status: {

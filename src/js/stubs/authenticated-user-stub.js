@@ -6,6 +6,7 @@ export const AuthenticatedUser = {
   id: 'd81738e8-213b-4bf5-9ec9-26d98944728b',
   username: 'jared-the-gen-contractor',
   profile: {
+    name: 'Jared Dunn',
     averageRating: 2,
     id: 'example-profile-000',
     certifications: [

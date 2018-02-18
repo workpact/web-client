@@ -6,7 +6,7 @@ import { withRouter } from 'react-router'
 import { getListings } from 'redux-store/actions/listingActions'
 import { ListingType } from 'types'
 
-class DirectoryContainer extends React.Component {
+class ProjectListingsContainer extends React.Component {
   static propTypes = {
     getListings: PropTypes.func,
     listings: PropTypes.arrayOf(PropTypes.shape(ListingType))
@@ -35,7 +35,7 @@ class DirectoryContainer extends React.Component {
   render() {
     return (
       <div>
-        <div>hello directory world</div>
+        <div>hello ProjectListings world</div>
         <pre>{JSON.stringify(this.props.listings, null, 4)}</pre>
       </div>
     )
@@ -55,5 +55,5 @@ const mapStateToProps = state => {
 }
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(DirectoryContainer)
+  connect(mapStateToProps, mapDispatchToProps)(ProjectListingsContainer)
 )
