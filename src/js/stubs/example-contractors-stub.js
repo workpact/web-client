@@ -7,12 +7,12 @@ export const ExampleContractors = [
       {
         id: '001-plumber',
         label: 'Licensed Plumber',
-        icon: 'plumber.svg'
+        icon: 'plumber'
       },
       {
         id: '002-general-contractor',
         label: 'Licensed General Contractor',
-        icon: 'general-contractor.svg'
+        icon: 'general'
       }
     ],
     status: 'Accepting Contracts',
@@ -49,7 +49,7 @@ export const ExampleContractors = [
       {
         id: '004-carpenter',
         label: 'Licensed Carpenter',
-        icon: 'carpenter.svg'
+        icon: 'carpenter'
       }
     ],
     status: 'Not Available',
@@ -90,8 +90,8 @@ export const ExampleContractors = [
     certifications: [
       {
         id: '004-carpenter',
-        label: 'Licensed Carpenter',
-        icon: 'carpenter.svg'
+        label: 'General Contractor',
+        icon: 'general'
       }
     ],
     status: 'Accepting Contracts',
@@ -114,9 +114,9 @@ export const ExampleContractors = [
     id: 'example-profile-231',
     certifications: [
       {
-        id: '004-carpenter',
-        label: 'Licensed Carpenter',
-        icon: 'carpenter.svg'
+        id: '004-plumber',
+        label: 'Licensed Plumber',
+        icon: 'plumber'
       }
     ],
     status: 'Accepting Contracts',

@@ -82,6 +82,26 @@ input[type='number'] {
   }
 }
 
+.SelectInput {
+  .Input-placeholder {
+    background-color: $brand-primary;
+    border: 0;
+    color: $off-white;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $brand-primary;
+      color: $off-white;
+    }
+  }
+
+  &-opts {
+    background-color: $brand-primary;
+    max-width: 90%;
+  }
+}
+
 .RadioButton {
   background-color: $blue;
 

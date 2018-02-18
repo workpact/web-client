@@ -8,17 +8,23 @@ import Description from './description'
 import Issuer from './issuer'
 import Status from './status'
 
+import { humanFormatDate } from 'util/helpers'
+
 const Listing = ({ listing }) => {
   listing = listing || {}
 
   return (
-    <div className='Listings-listing'>
+    <div className='ProjectListings-listing'>
       <Specialization data={listing.specialization} />
-      <Start data={listing.startDate.toLocaleDateString()} />
-      <End data={listing.endDate.toLocaleDateString()} />
-      <Price data={listing.price} />
-      <Description data={listing.description} />
-      <Issuer data={listing.issuer} />
+      <div className='ProjectListings-listing-date'>
+        <Start data={humanFormatDate(listing.startDate)} />
+        <End data={humanFormatDate(listing.endDate)} />
+      </div>
+      <Price data={listing.price.toFixed(7)} />
+      <div>
+        <Description data={listing.description} />
+        <Issuer data={listing.issuer} />
+      </div>
       <Status data={listing.status} />
     </div>
   )

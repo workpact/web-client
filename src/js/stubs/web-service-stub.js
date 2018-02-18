@@ -15,7 +15,9 @@ export class WebServiceStub {
   };
 
   getUser = async id => {
-    const user = loggedIn ? AuthenticatedUser : {}
+    const user = id
+      ? ExampleContractors.find(contractor => contractor.id === id)
+      : loggedIn ? AuthenticatedUser : {}
     return new Promise(resolve => {
       setTimeout(() => {
         return resolve({ data: user })
@@ -32,7 +34,7 @@ export class WebServiceStub {
     return new Promise(resolve => {
       setTimeout(() => {
         return resolve({ data: listings })
-      }, 2000)
+      }, 500)
     })
   };
 

@@ -3,7 +3,9 @@ import React from 'react'
 const Issuer = ({ data }) => {
   const issuer = data || {}
 
-  return <span className='Listings-listing-issuer'>{issuer.username}</span>
+  return (
+    <div className='ProjectListings-listing-issuer'>{issuer.username}</div>
+  )
 }
 
 export default Issuer

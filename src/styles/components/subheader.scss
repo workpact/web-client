@@ -24,6 +24,7 @@
   }
 
   &-link {
+    @include transition(0s ease border);
     align-items: center;
     border-bottom: 2px solid transparent;
     color: $off-white;
@@ -43,6 +44,7 @@
     }
 
     &.is-active {
+      @include transition(0.3s ease border);
       border-bottom: 2px solid $off-white;
     }
   }

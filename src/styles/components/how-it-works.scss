@@ -1,0 +1,24 @@
+/*
+HOW IT WORKS
+*/
+
+@import '../core/mixins';
+@import '../core/variables';
+
+$logo-height: 450px;
+
+.HowItWorks {
+  text-align: center;
+
+  .Logo {
+    height: $logo-height;
+    margin: 0 auto;
+    overflow: visible;
+    width: 400px;
+
+    svg {
+      height: $logo-height;
+      width: auto;
+    }
+  }
+}

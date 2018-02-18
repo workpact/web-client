@@ -4,16 +4,47 @@
 
 @import '../core/variables';
 
-footer {
-  align-items: center;
-  background-color: $light-gray;
+.Footer {
+  background-color: $dark-gray;
   bottom: 0;
-  display: flex;
-  font-size: 0.8em;
+  box-sizing: border-box;
+  font-size: $main-font-size;
   height: $footer-height;
-  justify-content: center;
   left: 0;
+  padding: $pad-mar-xx-large $pad-mar-med $pad-mar-med;
   position: relative;
-  text-align: center;
+  text-align: left;
   width: 100%;
+
+  &-content {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  &-link,
+  &-link:visited {
+    color: $light-gray;
+    display: inline-block;
+    font-variant: small-caps;
+    margin-bottom: $pad-mar-small;
+    text-decoration: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: rgba($light-gray, 0.8);
+    }
+  }
+
+  .Input {
+    &-label {
+      &-text {
+        color: $light-gray;
+        font-variant: small-caps;
+      }
+    }
+  }
 }

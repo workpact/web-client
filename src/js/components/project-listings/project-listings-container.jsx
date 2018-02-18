@@ -22,12 +22,7 @@ class ProjectListingsContainer extends React.Component {
   };
 
   render() {
-    return (
-      <div>
-        <div>Project listings:</div>
-        <ProjectListings listings={this.state.listings} />
-      </div>
-    )
+    return <ProjectListings listings={this.state.listings} />
   }
 }
 

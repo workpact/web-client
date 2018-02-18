@@ -5,7 +5,7 @@ TABLES
 @import '../core/mixins';
 @import '../core/_variables';
 
-$table-border: 1px solid $med-gray;
+$table-border: 1px solid transparent;
 
 .Table {
   border-bottom: $table-border;
@@ -36,7 +36,7 @@ $table-border: 1px solid $med-gray;
 
     tr {
       &:nth-child(odd) {
-        background-color: lighten($blue, 45%);
+        background-color: lighten($blue, 50%);
       }
 
       td:last-of-type {
@@ -73,7 +73,10 @@ $table-border: 1px solid $med-gray;
       color: $blue;
       justify-content: space-between;
 
+      &:active,
+      &:hover,
       &:focus {
+        color: $blue;
         text-decoration: none;
       }
 
@@ -97,17 +100,32 @@ $table-border: 1px solid $med-gray;
     @include transition(0s ease border 0.3s);
     font-weight: 400;
 
+    a {
+      color: $blue;
+      text-decoration: underline;
+
+      &:focus,
+      &:active,
+      &:hover {
+        color: $blue;
+      }
+    }
+
     &.is-active {
-      background-color: lighten($blue, 40%);
+      background-color: lighten($blue, 47%);
     }
   }
 
   &-pagination {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     margin-top: -$pad-mar-x-small;
     text-align: center;
 
     &-prevNextButton {
       color: $blue;
+      display: inline-block;
 
       &.is-disabled {
         color: $light-gray;
@@ -122,6 +140,7 @@ $table-border: 1px solid $med-gray;
     }
 
     .SelectInput {
+      display: inline-block;
       justify-content: center;
       width: 100px;
 

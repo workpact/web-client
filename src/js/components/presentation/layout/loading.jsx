@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { spinner } from 'icons'
+import spinner from 'images/spinner.png'
 import 'styles/components/loading.scss'
 
 const Loading = () => {

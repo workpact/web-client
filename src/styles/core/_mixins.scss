@@ -5,18 +5,18 @@ aka functions to output css
 */
 
 @mixin hexagon($color, $width) {
-  $extra: calc(#{$width} * 28.87);
+  $extra: calc(#{$width} * 0.2887);
 
   background-color: $color;
   position: relative;
-  height: calc(#{$width} * 57.74);
-  margin: $extra;
+  height: calc(#{$width} * 0.5774);
+  margin: $extra 0;
   width: $width;
 
-  &::after,
-  &::before {
-    border-left: calc(#{$width} / 2);
-    border-right: calc(#{$width} / 2);
+  &::before,
+  &::after {
+    border-left: calc(#{$width} / 2) solid transparent;
+    border-right: calc(#{$width} / 2) solid transparent;
     content: '';
     display: inline-block;
     position: absolute;

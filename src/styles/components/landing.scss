@@ -5,7 +5,7 @@ LANDING MARKETING PAGE
 @import '../core/mixins';
 @import '../core/variables';
 
-$hero-height: 600px;
+$hero-height: 650px;
 
 .Landing {
   font-size: $h3-font-size;
@@ -14,13 +14,15 @@ $hero-height: 600px;
   overflow: hidden;
 
   &-subheader {
+    font-size: $h1-font-size;
     text-align: center;
+    text-transform: uppercase;
     width: 100%;
   }
 
   &-hero {
     align-items: center;
-    background-color: rgba(desaturate($orange, 25%), 0.3);
+    background-color: rgba(darken($orange, 30%), 0.3);
     color: $off-white;
     display: flex;
     flex-wrap: wrap;
@@ -35,13 +37,32 @@ $hero-height: 600px;
       background-repeat: no-repeat;
       background-size: 100% auto;
       content: '';
-      display: inline;
+      display: inline-block;
       filter: blur(6px);
       height: $hero-height;
       overflow: hidden;
       position: fixed;
       width: 100%;
       z-index: -1;
+    }
+
+    .Landing-subheader {
+      font-size: $giant-font-size;
+      margin-top: $header-height;
+      width: 100%;
+
+      &::before {
+        background-image: url('~images/css-svgs/tool.svg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: block;
+        height: 50px;
+        margin-bottom: $pad-mar-large;
+        opacity: 0.5;
+        width: 100%;
+      }
     }
 
     &-action {
@@ -52,27 +73,73 @@ $hero-height: 600px;
 
     .Btn {
       align-items: center;
+      font-size: $h2-font-size;
       margin: 0 auto;
-      width: 200px;
+      width: 400px;
 
       &::after {
+        align-items: center;
         background-image: url('~images/css-svgs/arrow-point-to-right.svg');
         background-repeat: no-repeat;
         background-size: contain;
         content: '';
-        display: inline-block;
+        display: inline-flex;
         height: 1em;
-        margin-left: $pad-mar-med;
-        width: 20px;
+        margin-left: $pad-mar-large;
+        width: 30px;
       }
     }
   }
 
   &-cta {
-    background-color: $off-white;
+    background-color: $beige;
+    border-bottom: 10px solid $orange;
+    border-top: 10px solid $orange;
+    padding: $pad-mar-xx-large;
+    text-align: center;
+
+    .Landing-badgeWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: $pad-mar-xx-large 0 0;
+      justify-content: space-around;
+    }
+
+    .Landing-badge {
+      color: $orange;
+    }
+
+    .LicenseBadge {
+      @include hexagon($off-white, 150px);
+      margin-bottom: 60px;
+      text-align: left;
+    }
   }
 
   &-metrics {
-    background-color: $off-white;
+    position: relative;
+
+    &-backdrop {
+      background-color: $beige;
+      background-image: url('~images/blueprint.jpg');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      display: inline-block;
+      filter: blur(6px);
+      min-height: $hero-height;
+      position: absolute;
+      top: -5px;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &-content {
+      background-color: rgba(0, 0, 0, 0.4);
+      box-sizing: border-box;
+      color: $off-white;
+      font-weight: 300;
+      padding: 100px;
+    }
   }
 }

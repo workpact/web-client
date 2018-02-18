@@ -4,6 +4,7 @@ import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 
 import AuthenticatedRoutes from './authenticated-routes'
+import HowItWorks from 'components/how-it-works'
 import LandingContainer from 'components/landing'
 import LoginFormContainer from 'components/forms/login-form'
 import NewUserFormContainer from 'components/forms/new-user-form'
@@ -41,6 +42,7 @@ const MainRouter = ({ user }) => {
         <Route path='/contractors' component={DirectoryContainer} />
         <Route path='/projects' component={ProjectListings} />
         <Route path='/user/:id' component={UserContainer} />
+        <Route path='/how-it-works' component={HowItWorks} />
         {AuthenticatedRoutes}
         <Route path='*' component={FourOhFour} />
       </Switch>

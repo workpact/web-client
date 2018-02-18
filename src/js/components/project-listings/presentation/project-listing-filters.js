@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { TextInput, SelectInput } from 'bloom-forms'
 
-const DirectoryFilters = ({
+const ProjectListingFilters = ({
   filterContractors,
   updateForm,
   manualFieldUpdate,
@@ -32,15 +32,15 @@ const DirectoryFilters = ({
   }
 
   return (
-    <div className='Directory-filters'>
+    <div className='ProjectListings-filters'>
       <TextInput
-        label='Search by Name'
+        label='Search by User Name'
         name='name-search'
         onChange={searchUpdate}
         value={(formData['name-search'] && formData['name-search'].value) || ''}
         showLabel
       />
-      <div className='Directory-filters-row'>
+      <div className='ProjectListings-filters-row'>
         <SelectInput
           formId={props.formId}
           label='Filter by Specialty'
@@ -73,7 +73,7 @@ const DirectoryFilters = ({
           name='filter-rating'
           onChange={filterUpdate}
           options={[0, 1, 2]}
-          placeholder='Rating'
+          placeholder='User Rating'
           typeAhead={false}
           value={
             (formData['filter-rating'] && formData['filter-rating'].value) || ''
@@ -84,11 +84,11 @@ const DirectoryFilters = ({
   )
 }
 
-DirectoryFilters.propTypes = {
+ProjectListingFilters.propTypes = {
   filterContractors: PropTypes.func.isRequired,
   formData: PropTypes.object.isRequired,
   manualFieldUpdate: PropTypes.func,
   updateForm: PropTypes.func
 }
 
-export default DirectoryFilters
+export default ProjectListingFilters

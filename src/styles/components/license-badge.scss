@@ -6,5 +6,51 @@ LICENSE BADGE
 @import '../core/variables';
 
 .LicenseBadge {
-  @include hexagon($brand-primary, 200px);
+  @include hexagon($brand-primary, 100px);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  color: $off-white;
+  box-shadow: $box-shadow;
+  overflow: visible;
+
+  &--carpenter {
+    background-image: url('~images/css-svgs/carpenter.svg');
+  }
+
+  &--carpenter-1 {
+    background-image: url('~images/css-svgs/carpenter-1.svg');
+  }
+
+  &--electrician {
+    background-image: url('~images/css-svgs/electrician.svg');
+  }
+
+  &--electrician-1 {
+    background-image: url('~images/css-svgs/electrician-1.svg');
+  }
+
+  &--general {
+    background-image: url('~images/css-svgs/general.svg');
+  }
+
+  &--general-1 {
+    background-image: url('~images/css-svgs/general-1.svg');
+  }
+
+  &--mechanic {
+    background-image: url('~images/css-svgs/tool.svg');
+  }
+
+  &--mechanic-1 {
+    background-image: url('~images/css-svgs/tool-1.svg');
+  }
+
+  &--plumber {
+    background-image: url('~images/css-svgs/plumber.svg');
+  }
+
+  &--plumber-1 {
+    background-image: url('~images/css-svgs/plumber-1.svg');
+  }
 }

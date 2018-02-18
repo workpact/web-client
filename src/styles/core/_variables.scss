@@ -15,14 +15,14 @@ $black: #000;
 $white: #fff;
 $beige: #f4f1de;
 $off-white: lighten($beige, 8%);
-$light-gray: #e6e6e6;
+$light-gray: #bbc2c4;
 $lighter-gray: #eee;
 $med-gray: #acacac;
 $dark-gray: #1f363d;
 
 $red: #db162f;
 $blue: #4357ad;
-$green: #5cb85c;
+$green: #36ba59;
 $light-blue: #5bc0de;
 $yellow: #f0ad4e;
 $orange: #e07a5f;
@@ -64,7 +64,8 @@ $main-font: 'Roboto', sans-serif;
 $alt-font: 'Fjalla One', sans-serif;
 
 $main-font-size: 18px;
-$giant-font-size: 100px;
+$giant-font-size: 80px;
+$big-font-size: 60px;
 $large-font-size: 18px;
 $med-font-size: 14px;
 $small-font-size: 12px;
@@ -93,7 +94,7 @@ Components
 Common padding and border radius sizes and more.
 =================
 */
-$footer-height: 50px;
+$footer-height: 200px;
 $header-height: 100px;
 $sidebar-width: 250px;
 

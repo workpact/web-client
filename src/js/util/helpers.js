@@ -68,7 +68,7 @@ export function humanFormatDateTime(unixNum) {
 
 export function humanFormatDate(unixNum, isLong) {
   let date = moment(unixNum)
-  return isLong ? date.format('MMM D, YYYY') : date.format('MM/DD/YYYY')
+  return isLong ? date.format('MMM D, YYYY') : date.format('MM/DD/YY')
 }
 
 export function convertWeiToEth(bigNum) {

@@ -1,7 +1,12 @@
 import React from 'react'
 
 const Status = ({ data: status }) => {
-  return <span className='Listings-listing-status'>{status}</span>
+  return (
+    <dl className='ProjectListings-listing-status'>
+      <dt>Status</dt>
+      <dd>{status}</dd>
+    </dl>
+  )
 }
 
 export default Status

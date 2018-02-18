@@ -1,7 +1,9 @@
 import React from 'react'
 
 const Description = ({ data: description }) => {
-  return <span className='Listings-listing-description'>{description}</span>
+  return (
+    <div className='ProjectListings-listing-description'>{description}</div>
+  )
 }
 
 export default Description

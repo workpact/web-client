@@ -2,6 +2,7 @@
 DIRECTORY
 */
 
+@import '../core/mixins';
 @import '../core/variables';
 
 .Directory {
@@ -17,6 +18,107 @@ DIRECTORY
 
     .SelectInput-wrapper {
       width: 30%;
+    }
+  }
+
+  &-contractor {
+    align-items: stretch;
+    box-shadow: $box-shadow;
+    box-sizing: border-box;
+    color: $dark-gray;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: $pad-mar-x-large auto;
+    max-width: 900px;
+
+    &-avatar {
+      height: 100px;
+      margin-right: $pad-mar-small;
+    }
+
+    &-summary {
+      padding: $pad-mar-med $pad-mar-large;
+      text-align: center;
+      width: 45%;
+
+      &-data {
+        display: inline-block;
+      }
+    }
+
+    &-specialty {
+      color: $med-gray;
+      font-style: italic;
+    }
+
+    &-line {
+      background-color: $red;
+      height: 1px;
+      margin: $pad-mar-small auto $pad-mar-large;
+      width: 30%;
+    }
+
+    &-status {
+      color: $green;
+
+      &.is-inactive {
+        color: $dark-gray;
+      }
+    }
+
+    &-history {
+      background-color: $beige;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      padding: $pad-mar-large $pad-mar-xx-large;
+      width: 55%;
+
+      .LicenseBadge {
+        @include hexagon($brand-primary, 50px);
+      }
+    }
+  }
+
+  &-definition {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+
+    &--wrapped {
+      flex-wrap: wrap;
+      margin-top: $pad-mar-small;
+
+      dt,
+      dd {
+        width: 100%;
+      }
+    }
+
+    dt,
+    dd {
+      margin: 0;
+      text-align: left;
+    }
+
+    dd {
+      &:first-of-type {
+        color: $brand-primary;
+        display: inline-block;
+        font-size: $h3-font-size;
+        font-weight: 600;
+        margin-right: $pad-mar-x-small;
+        text-align: center;
+        width: 30px;
+      }
+
+      &.is-true {
+        background-image: url('~images/css-svgs/checkmark.svg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 20px;
+      }
     }
   }
 }

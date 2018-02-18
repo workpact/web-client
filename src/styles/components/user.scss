@@ -1,0 +1,215 @@
+/*
+USER
+*/
+
+@import '../core/mixins';
+@import '../core/variables';
+
+$user-border: 1px solid $light-gray;
+
+.User {
+  background-color: $beige;
+  color: $dark-gray;
+  min-height: calc(100vh - #{$header-height});
+  padding: $pad-mar-x-large 0;
+
+  &-content {
+    align-items: stretch;
+    background-color: $off-white;
+    box-shadow: $box-shadow;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: $pad-mar-large auto;
+    padding: $pad-mar-large $pad-mar-xx-large;
+    max-width: 900px;
+  }
+
+  &-header {
+    display: flex;
+    font-size: 1.3em;
+    margin: $pad-mar-large 0;
+    width: 100%;
+
+    .LicenseBadge {
+      @include hexagon($orange, 60px);
+      margin-right: $pad-mar-small;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-subheader {
+    font-family: $alt-font;
+    font-size: $h2-font-size;
+    text-transform: uppercase;
+  }
+
+  &-avatar {
+    height: 150px;
+    margin-right: $pad-mar-small;
+  }
+
+  &-intro {
+    display: flex;
+    padding: $pad-mar-med 0;
+    text-align: center;
+    width: 65%;
+
+    &-data {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &-name {
+    font-size: $h1-font-size;
+    text-transform: uppercase;
+  }
+
+  &-specialty {
+    color: $med-gray;
+    font-style: italic;
+  }
+
+  &-line {
+    background-color: $red;
+    height: 2px;
+    margin: $pad-mar-small auto $pad-mar-med;
+    width: 50%;
+  }
+
+  &-status {
+    color: $green;
+    width: 100%;
+
+    &.is-inactive {
+      color: $dark-gray;
+    }
+  }
+
+  &-history {
+    align-items: flex-end;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: $pad-mar-large $pad-mar-xx-large;
+    width: 45%;
+
+    dl {
+      width: 100%;
+    }
+  }
+
+  &-rating {
+    border-bottom: $user-border;
+    border-top: $user-border;
+    padding: $pad-mar-xx-large 0;
+    width: 100%;
+
+    dt {
+      width: 60%;
+    }
+
+    dd:first-of-type {
+      flex-grow: 1;
+      min-width: 150px;
+      text-align: right;
+    }
+
+    .ProgressBar {
+      height: 20px;
+      min-width: 300px;
+      width: 100%;
+
+      &[value],
+      &:not([value]) {
+        &::-webkit-progress-bar {
+          background-color: $lighter-gray;
+          border-radius: $border-radius;
+          box-shadow: inset 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        &::-webkit-progress-value {
+          background-color: $brand-primary;
+          border-radius: $border-radius;
+        }
+      }
+    }
+  }
+
+  &-contracts,
+  &-tips {
+    display: block;
+    padding: $pad-mar-x-large 0;
+    width: 100%;
+  }
+
+  &-tips {
+    border-bottom: $user-border;
+
+    &-list-item {
+      box-sizing: border-box;
+      display: flex;
+      padding: $pad-mar-med $pad-mar-large;
+
+      &:nth-child(2n - 1) {
+        background-color: lighten($green, 42%);
+      }
+
+      &-quote {
+        &::before,
+        &::after {
+          content: '\201c';
+          display: inline-block;
+          font-size: 30px;
+          height: 30px;
+          width: 30px;
+        }
+
+        &::after {
+          content: '\201d';
+        }
+      }
+
+      &-citation {
+        margin: 0 auto;
+        text-align: right;
+        width: 100%;
+      }
+    }
+
+    dl,
+    dd,
+    dt {
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    dl {
+      display: flex;
+    }
+
+    &-coins {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      width: 100px;
+
+      &::before {
+        background-image: url('~images/css-svgs/coins.svg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+}
