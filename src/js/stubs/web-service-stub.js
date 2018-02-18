@@ -13,7 +13,7 @@ export class WebServiceStub {
     return Promise.resolve({ data: true })
   };
 
-  getUser = async () => {
+  getUser = async id => {
     const user = loggedIn ? AuthenticatedUser : {}
     return new Promise(resolve => {
       setTimeout(() => {
