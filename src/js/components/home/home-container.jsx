@@ -5,9 +5,6 @@ import { connect } from 'react-redux'
 import { getUser } from 'redux-store/actions/userActions'
 import { UserType } from 'types'
 
-import ExamplesContainer from 'components/examples'
-import SideBar from 'components/navigation/side-bar'
-
 import 'styles/components/home'
 
 class HomeContainer extends React.Component {
@@ -37,19 +34,7 @@ class HomeContainer extends React.Component {
   };
 
   render() {
-    return (
-      <div className='Home'>
-        <SideBar user={this.props.user} />
-        <div className='Home-content'>
-          <h2>Main Content Here</h2>
-          <p>
-            Below is an overview of some basic elements used throughout the
-            starterkit.
-          </p>
-          <ExamplesContainer />
-        </div>
-      </div>
-    )
+    return <div className='Home'>User dashboard</div>
   }
 }
 

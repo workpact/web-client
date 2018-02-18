@@ -1,5 +1,6 @@
 export const AuthenticatedUser = {
   account: {
+    id: '001-example-account',
     ethBalance: '402.7801'
   },
   id: 'd81738e8-213b-4bf5-9ec9-26d98944728b',
