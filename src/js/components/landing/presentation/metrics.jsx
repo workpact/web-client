@@ -11,19 +11,18 @@ const Metrics = () => {
       <div className='Landing-metrics-content'>
         <h2 className='Landing-subheader'>Why Indepact?</h2>
         <p>
-          Lorem ipsum dolor amet health goth tousled gentrify, seitan fashion
-          axe offal ethical plaid. Keffiyeh disrupt leggings viral cold-pressed
-          chillwave next level chia yuccie, VHS four dollar toast trust fund
-          godard raw denim. Iceland skateboard deep v cliche lo-fi ugh gochujang
-          hella cronut adaptogen. 3 wolf moon pickled salvia leggings,
-          knausgaard direct trade hoodie.
+          Bounties Network provided a platform to connect independent
+          contractors with customers who need a specific job completed.
+          Unfortunately this setup relies on the honesty of both parties for a
+          positive experience. To alleviate this shortcoming, INDEPACT tracks
+          the reliability of a service provider to indicate how often their work
+          is completed to the satisfaction of both parties.
         </p>
         <p>
-          Copper mug vaporware humblebrag iPhone shaman craft beer dreamcatcher
-          whatever wayfarers tousled hexagon taiyaki. Tumeric helvetica kinfolk
-          shaman hell of af. Franzen twee put a bird on it small batch
-          authentic. Portland swag aesthetic lo-fi 90's XOXO wolf pitchfork
-          selfies, intelligentsia cold-pressed.
+          We extended the StandardBounties.sol smart contract as
+          StandardBountiesReputation, which automatically tracks the reputation
+          of service providers on-chain, based on whether the outcome of each
+          job is Complete, Incomplete, or Disputed.
         </p>
       </div>
     </div>
