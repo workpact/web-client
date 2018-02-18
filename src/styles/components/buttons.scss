@@ -57,17 +57,18 @@ button {
 }
 
 .Btn {
-  background-color: transparent;
-  border: 1px solid $dark-gray;
-  color: $dark-gray;
+  background-color: $brand-primary;
+  border: 0;
+  border-radius: $border-radius;
+  color: $white;
   display: inline-flex;
+  justify-content: center;
   padding: $pad-mar-med;
 
   &:hover,
   &:focus,
   &.is-focus {
-    background-color: $light-gray;
-    color: $btn-default-color;
+    background-color: darken($brand-primary, 10%);
     text-decoration: none;
   }
 

@@ -1,12 +1,9 @@
 import React from 'react'
-import SVGInline from 'react-svg-inline'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
 import AccountDropdownContainer from 'components/navigation/account-dropdown'
 import HamburgerButton from 'layout/hamburger-button'
-
-import downCarrot from 'images/inline-svgs/down_carrot.svg'
 
 import 'styles/components/subheader.scss'
 
@@ -75,8 +72,9 @@ class SubHeader extends React.Component {
               onClick={this.toggleDropdown}
               className='SubHeader-user SubHeader-link'
             >
-              {user.username}
-              <SVGInline svg={downCarrot} />
+              <span className='u-sr-only'>
+                User Actions for {user.username}
+              </span>
             </a>
           ) : (
             <Link to='/login' className='SubHeader-link'>

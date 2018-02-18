@@ -7,8 +7,8 @@
 
 .SubHeader {
   align-items: center;
-  background-color: $off-white;
-  color: $dark-gray;
+  background-color: $dark-gray;
+  color: $off-white;
   display: none;
   font-family: $main-font;
   font-size: $main-font-size;
@@ -37,7 +37,7 @@
     &:focus,
     &:hover,
     &:visited {
-      color: $brand-primary;
+      color: $white;
     }
   }
 
@@ -45,11 +45,22 @@
     align-items: center;
     display: inline-flex;
     height: 100%;
+
+    &::before {
+      background-image: url('~distImages/avatar.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      display: inline-block;
+      height: 50px;
+      margin-right: $pad-mar-small;
+      width: 50px;
+    }
   }
 
   svg {
     @include transition(0.3s ease);
-    fill: $brand-primary;
+    fill: $white;
     margin-left: $pad-mar-small;
     width: 1em;
   }

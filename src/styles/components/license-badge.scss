@@ -1,0 +1,10 @@
+/*
+LICENSE BADGE
+*/
+
+@import '../core/mixins';
+@import '../core/variables';
+
+.LicenseBadge {
+  @include hexagon($brand-primary, 200px);
+}

@@ -5,14 +5,20 @@
 
 .Header {
   align-items: center;
-  background-color: $off-white;
+  background-color: $dark-gray;
   box-shadow: $box-shadow;
   box-sizing: border-box;
-  color: $brand-primary;
+  color: $white;
   display: flex;
   height: $header-height;
   justify-content: space-between;
   padding: 0 0 0 $pad-mar-med;
   position: relative;
   z-index: $z-20;
+
+  .Logo {
+    svg {
+      fill: $off-white;
+    }
+  }
 }
