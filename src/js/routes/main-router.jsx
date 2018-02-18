@@ -37,7 +37,7 @@ const MainRouter = ({ user }) => {
             )
           }
         />
-        <Route path='/directory' render={DirectoryContainer} />
+        <Route path='/directory' component={DirectoryContainer} />
         <Route path='/user/:id' component={UserContainer} />
         {AuthenticatedRoutes}
         <Route path='*' component={FourOhFour} />
