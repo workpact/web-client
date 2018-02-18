@@ -7,6 +7,8 @@ import AuthenticatedRoutes from './authenticated-routes'
 import LandingContainer from 'components/landing'
 import LoginFormContainer from 'components/forms/login-form'
 import NewUserFormContainer from 'components/forms/new-user-form'
+import DirectoryContainer from 'components/directory'
+import UserContainer from 'components/user'
 
 import FourOhFour from 'pages/four-oh-four.jsx'
 
@@ -35,6 +37,8 @@ const MainRouter = ({ user }) => {
             )
           }
         />
+        <Route path='/directory' render={DirectoryContainer} />
+        <Route path='/user' component={UserContainer} />
         {AuthenticatedRoutes}
         <Route path='*' component={FourOhFour} />
       </Switch>
