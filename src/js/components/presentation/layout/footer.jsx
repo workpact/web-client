@@ -4,7 +4,35 @@ import 'styles/components/footer'
 
 const Footer = () => {
   return (
-    <footer>This is the super awesome footer. Oo. Much Wow. Such Amaze.</footer>
+    <footer className='Footer'>
+      <div>
+        <a className='Footer-link' href='#'>
+          HOME
+        </a>
+        <br />
+        <a className='Footer-link' href='#'>
+          DIRECTORY
+        </a>
+        <br />
+        <a className='Footer-link' href='#'>
+          MY PROFILE
+        </a>
+      </div>
+      <div>
+        <a className='Footer-link' href='#'>
+          FAQ & SUPPORT
+        </a>
+        <br />
+        <a className='Footer-link' href='#'>
+          TERMS & CONDITIONS
+        </a>
+      </div>
+      <div>
+        <form>
+          <input type='text' name='search' />
+        </form>
+      </div>
+    </footer>
   )
 }
 

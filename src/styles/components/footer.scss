@@ -4,16 +4,30 @@
 
 @import '../core/variables';
 
-footer {
+.Footer {
   align-items: center;
-  background-color: $light-gray;
+  background-color: $dark-gray;
   bottom: 0;
+  //color: $white;
   display: flex;
-  font-size: 0.8em;
+  font-size: $main-font-size;
   height: $footer-height;
   justify-content: center;
   left: 0;
+  padding: 0 0 0 $pad-mar-med;
   position: relative;
-  text-align: center;
+  text-align: left;
   width: 100%;
+
+  &-link {
+    color: $white;
+    text-decoration: none;
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited {
+      color: $white;
+    }
+  }
 }
