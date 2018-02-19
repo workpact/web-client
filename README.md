@@ -1,4 +1,4 @@
-# WORKPACT Web Client
+# INDEPACT Web Client
 
 This uses the [Bloom starter kit](https://github.com/vineyard-bloom/bloom-starter).
 
